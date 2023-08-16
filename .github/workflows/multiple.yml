@@ -29,7 +29,7 @@ jobs:
             -e USE_TAG=2.0.8.1 \
             -v $(pwd)/Firmware/Builds:/home/platformio/build \
             -v $(pwd)/Firmware/Configuration:/home/platformio/CustomConfiguration \
-            frealmyr/marlin-build:latest
+            sgngodin/braillerap-marlin-build:latest
 
       - name: Push firmware
         run: |
