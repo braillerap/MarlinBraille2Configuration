@@ -7,6 +7,8 @@ on:
     paths:
       - 'Firmware/Configuration/**.h'
   
+  workflow_dispatch:
+
 jobs:
   build_and_push:
     name: Compile and Push Firmware
