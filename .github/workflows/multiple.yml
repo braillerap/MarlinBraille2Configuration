@@ -23,7 +23,7 @@ jobs:
       - name: Compile firmware
         run: |
           docker run \
-            -u root:root \
+            -u docker:docker \
             -e BOARD \
             -e UPDATE_FORCE=true \
             -e USE_BRANCH=BrailleRAP \
