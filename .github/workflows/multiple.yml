@@ -34,6 +34,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with: 
+          name: mega2560
           path: Firmware/builds/mega2560/*.hex
       #- name: Push firmware
       #  run: |
