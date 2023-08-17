@@ -14,7 +14,7 @@ jobs:
     name: Compile and Push Firmware
     runs-on: ubuntu-latest
     env:
-      BOARD: mega2560
+      BOARD: esp32
       
     steps:
       - name: Check out repo
@@ -29,12 +29,12 @@ jobs:
             -e USE_BRANCH=BrailleRAP \
             -e FW_EXTENSION=hex \
             -v $(pwd)/Firmware/builds:/home/platformio/build \
-            -v $(pwd)/Firmware/configuration/mega2560:/home/platformio/CustomConfiguration \
+            -v $(pwd)/Firmware/configuration/MKSTinyBee:/home/platformio/CustomConfiguration \
             sgngodin/braillerap-marlin-build:latest
       
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with: 
-          name: mega2560
-          path: Firmware/builds/mega2560/*.hex
+          name: esp32
+          path: Firmware/builds/esp32/*.hex
      

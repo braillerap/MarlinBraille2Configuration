@@ -1,0 +1,40 @@
+name: Build MKS 2560 Marlin Firmware
+
+on:
+  push:
+    branches:
+      - master
+    #paths:
+    #  - 'Firmware/Configuration/**.h'
+  
+  workflow_dispatch:
+
+jobs:
+  build_and_push:
+    name: Compile and Push Firmware
+    runs-on: ubuntu-latest
+    env:
+      BOARD: mega2560
+      
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+
+      - name: Compile firmware
+        run: |
+          docker run \
+            -u root:root \
+            -e BOARD \
+            -e UPDATE_FORCE=true \
+            -e USE_BRANCH=BrailleRAP \
+            -e FW_EXTENSION=hex \
+            -v $(pwd)/Firmware/builds:/home/platformio/build \
+            -v $(pwd)/Firmware/configuration/mega2560:/home/platformio/CustomConfiguration \
+            sgngodin/braillerap-marlin-build:latest
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with: 
+          name: mega2560
+          path: Firmware/builds/mega2560/*.hex
+     
