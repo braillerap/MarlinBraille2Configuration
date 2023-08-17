@@ -34,8 +34,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with: 
-          name: assets-for-download
-          path: Firmware/builds
+          path: Firmware/builds/*.hex
       - name: Push firmware
         run: |
           git config user.name github-actions
