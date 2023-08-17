@@ -1,4 +1,4 @@
-name: Build Marlin Firmware
+name: Build 2560 Marlin Firmware
 
 on:
   push:
