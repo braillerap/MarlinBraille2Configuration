@@ -29,7 +29,7 @@ jobs:
             -e USE_BRANCH=BrailleRAP \
             -e FW_EXTENSION=hex \
             -v $(pwd)/Firmware/builds:/home/platformio/build \
-            -v $(pwd)/Firmware/configuration:/home/platformio/CustomConfiguration \
+            -v $(pwd)/Firmware/configuration/mega2560:/home/platformio/CustomConfiguration \
             sgngodin/braillerap-marlin-build:latest
       - name: Upload artifact
         uses: actions/upload-artifact@v3
