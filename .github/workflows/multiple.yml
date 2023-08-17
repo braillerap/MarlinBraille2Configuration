@@ -27,6 +27,7 @@ jobs:
             -e BOARD \
             -e UPDATE_FORCE=true \
             -e USE_BRANCH=BrailleRAP \
+            -e FW_EXTENSION=hex \
             -v $(pwd)/Firmware/builds:/home/platformio/build \
             -v $(pwd)/Firmware/configuration:/home/platformio/CustomConfiguration \
             sgngodin/braillerap-marlin-build:latest
