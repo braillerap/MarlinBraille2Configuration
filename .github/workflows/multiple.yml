@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'Firmware/Configuration/**.h'
+    #paths:
+    #  - 'Firmware/Configuration/**.h'
   
   workflow_dispatch:
 
