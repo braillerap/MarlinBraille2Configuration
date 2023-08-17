@@ -14,7 +14,7 @@ jobs:
     name: Compile and Push Firmware
     runs-on: ubuntu-latest
     env:
-      BOARD: esp32
+      BOARD: mks_tinybee
       
     steps:
       - name: Check out repo
@@ -35,6 +35,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with: 
-          name: esp32
-          path: Firmware/builds/esp32/*.hex
+          name: mks_tinybee
+          path: Firmware/builds/mks_tinybee/*.hex
      
