@@ -1,4 +1,4 @@
-name: Build 2560 Marlin Firmware
+name: Build MKS TinyBee Marlin Firmware
 
 on:
   push:
