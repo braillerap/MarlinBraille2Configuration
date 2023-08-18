@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    #paths:
-    #  - 'Firmware/Configuration/**.h'
+    paths:
+      - 'Firmware/Configuration/MKSTinyBee/**.h'
   
   workflow_dispatch:
 
