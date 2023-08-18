@@ -3,7 +3,7 @@ name: Build MKS 2560 Marlin Firmware
 on:
   push:
     branches:
-      - master
+      - main
     #paths:
     #  - 'Firmware/Configuration/**.h'
   
