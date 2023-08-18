@@ -1628,14 +1628,14 @@
 
 // @section extruder
 
-#define DISABLE_E false             // Disable the extruder when not stepping
+#define DISABLE_E true             // Disable the extruder when not stepping
 #define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
 
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
-#define INVERT_Y_DIR true
+#define INVERT_Y_DIR false
 #define INVERT_Z_DIR false
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
@@ -3335,3 +3335,9 @@
 
 // Disable servo with M282 to reduce power consumption, noise, and heat when not in use
 //#define SERVO_DETACH_GCODE
+
+#define BRAILLERAP_ENABLE
+#if ENABLED(BRAILLERAP_ENABLE)
+#define BRAILLERAP_ELECTROMAGNET_DELAY	50
+#define BRAILLERAP_AUTODISABL_MAGNET	1
+#endif
