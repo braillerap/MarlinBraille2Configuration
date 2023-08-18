@@ -37,4 +37,11 @@ jobs:
         with: 
           name: mega2560
           path: Firmware/builds/mega2560/*.hex
-     
+      
+      - name: Remove old artifacts
+        uses: c-hive/gha-remove-artifacts@v1
+        with:
+          age: '6 month' # '<number> <unit>', e.g. 5 days, 2 years, 90 seconds, parsed by Moment.js
+          # Optional inputs
+          # skip-tags: true
+          skip-recent: 2
