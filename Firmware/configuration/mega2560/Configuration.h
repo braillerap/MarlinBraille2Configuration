@@ -444,7 +444,7 @@
  *
  * Temperature sensors available:
  *
- *  SPI RTD/Thermocouple Boards - IMPORTANT: Read the NOTE below!
+ *    RTD/Thermocouple Boards - IMPORTANT: Read the NOTE below!
  *  -------
  *    -5 : MAX31865 with Pt100/Pt1000, 2, 3, or 4-wire  (only for sensors 0-1)
  *                  NOTE: You must uncomment/set the MAX31865_*_OHMS_n defines below.
@@ -1902,7 +1902,7 @@
  * Turn on with the command 'M111 S32'.
  * NOTE: Requires a lot of PROGMEM!
  */
-//#define DEBUG_LEVELING_FEATURE
+#define DEBUG_LEVELING_FEATURE
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL, PROBE_MANUALLY)
   // Set a height for the start of manual adjustment
