@@ -3344,7 +3344,7 @@
 // magnet on pin 8
 #define SPINDLE_LASER_PWM_PIN MOSFET_C_PIN  
 // FAN on pin 9
-#define FAN_PIN MOSFET_C_PIN  
+#define FAN_PIN MOSFET_B_PIN  
 
 
 #endif
