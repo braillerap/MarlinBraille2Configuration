@@ -76,7 +76,7 @@
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
 // BrailleRAP don't have display
-//#define SHOW_BOOTSCREEN
+#define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
 //#define SHOW_CUSTOM_BOOTSCREEN
