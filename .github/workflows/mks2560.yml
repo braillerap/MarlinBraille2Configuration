@@ -33,7 +33,7 @@ jobs:
             sgngodin/braillerap-marlin-build:latest
       
       - name: Upload artifact
-        uses: actions/upload-artifact@4.3.3
+        uses: actions/upload-artifact@v4.3.3
         with: 
           name: mega2560
           path: Firmware/builds/mega2560/*.hex
