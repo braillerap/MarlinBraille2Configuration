@@ -1161,7 +1161,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 87/2, 400, 500 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -3336,3 +3336,28 @@
 
 // Disable servo with M282 to reduce power consumption, noise, and heat when not in use
 //#define SERVO_DETACH_GCODE
+
+#define BRAILLERAP_ENABLE
+#define BRAILLERAP_DISABLE_SOLENOID 0
+//#define BRAILLERAP_DEBUG_ENABLE
+#if ENABLED(BRAILLERAP_ENABLE)
+
+#define BRAILLERAP_AUTODISABL_MAGNET	1
+#define PAPER_LOADING_HOME_Y  1
+#define PAPER_LOADING_MAX_LOAD_TRAVEL 300
+#define PAPER_LOADING_LOAD_TRAVEL 25
+
+#if BRAILLERAP_DISABLE_SOLENOID
+#define SPINDLE_LASER_PWM_POWERON 0
+#else
+#define SPINDLE_LASER_PWM_POWERON 255
+#endif
+#define SPINDLE_LASER_PWM_POWEROFF 0
+
+// magnet on pin 8
+#define SPINDLE_LASER_PWM_PIN MOSFET_C_PIN  
+// FAN on pin 9
+#define FAN_PIN MOSFET_B_PIN  
+
+
+#endif
