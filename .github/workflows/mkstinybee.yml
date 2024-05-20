@@ -18,7 +18,7 @@ jobs:
       
     steps:
       - name: Check out repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.4
 
       - name: Compile firmware
         run: |
@@ -33,7 +33,7 @@ jobs:
             sgngodin/braillerap-marlin-build:latest
       
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.3.3
         with: 
           name: mks_tinybee
           path: Firmware/builds/mks_tinybee/*.bin
